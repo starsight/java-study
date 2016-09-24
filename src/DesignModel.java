@@ -3,15 +3,9 @@
  */
 public class DesignModel {
 
-    String a = "ok";
-
-    public DesignModel() {
-        a = "q";
-    }
-
     public static void main(String args[]) {
-        DesignModel d = new DesignModel();
-        System.out.print(d.a);
+        MallDuck mallduck = new MallDuck();
+        mallduck.PerformFly();
     }
 
 }
