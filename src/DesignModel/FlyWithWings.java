@@ -1,4 +1,4 @@
-import sun.rmi.runtime.Log;
+package DesignModel;
 
 /**
  * Created by yiyuan on 2016/9/24.
@@ -6,6 +6,6 @@ import sun.rmi.runtime.Log;
 public class FlyWithWings implements FlyBehavior {
     @Override
     public void fly() {
-        System.out.println("FlyWithWings");
+        System.out.println("DesignModel.FlyWithWings");
     }
 }
