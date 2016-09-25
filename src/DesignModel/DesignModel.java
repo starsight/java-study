@@ -8,6 +8,11 @@ public class DesignModel {
     public static void main(String args[]) {
         MallDuck mallduck = new MallDuck();
         mallduck.PerformFly();
+
+        final MallDuck m = new MallDuck();
+        m.fly = new FlyWithWings();
+
+        //m = new MallDuck();//error
     }
 
 }
