@@ -115,7 +115,7 @@ public  class JavaSE {
         ArrayList<A> al = new ArrayList();
        // ((ArrayList<JavaSE>)b.arr()).get(0).replaceSpace(""));
         //al.get(0).show(new A());
-        Integer it = 4;
+       /* Integer it = 4;
         System.out.println(it.intValue());
         System.out.println(it.longValue());
         //System.out.println(it.s);
@@ -125,7 +125,23 @@ public  class JavaSE {
         JavaSE jse = new JavaSE();
         System.out.println(jse.xiaochengxu);
         xiaochengxu(jse);
-        System.out.println(jse.xiaochengxu);
+        System.out.println(jse.xiaochengxu);*/
+
+       String str1 = "3";
+       Integer it = Integer.parseInt(str1);
+        String str2 = it.toString();
+        if(str2.equals(str1))
+            System.out.println("yes");
+
+        String str3="33";
+        String str4=Integer.toString(33);
+        if(str4==str3)
+            System.out.println("yes2");
+            System.out.println(str4);
+        String str5=str4;
+        if(str3==str5)
+            System.out.println("yes3");
+
     }
 
     int xiaochengxu=0;
