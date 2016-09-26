@@ -1,4 +1,4 @@
-package DesignModel;
+package com.wenjiehe.DesignModel;
 
 /**
  * Created by yiyuan on 2016/9/24.
@@ -6,6 +6,6 @@ package DesignModel;
 public class FlyWithWings implements FlyBehavior {
     @Override
     public void fly() {
-        System.out.println("DesignModel.FlyWithWings");
+        System.out.println("FlyWithWings");
     }
 }

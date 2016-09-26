@@ -1,4 +1,4 @@
-package DesignModel;
+package com.wenjiehe.DesignModel;
 
 /**
  * Created by yiyuan on 2016/9/22.
