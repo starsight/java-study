@@ -4,7 +4,7 @@ package com.wenjiehe.JavaSE;
  * Created by yiyuan on 2016/9/24.
  */
 public class Test extends JavaSE{
-    int i =0;
+    private int i =0;
     static Test tt = new Test();
     {
         System.out.println("子类代码块");
@@ -18,6 +18,10 @@ public class Test extends JavaSE{
         System.out.println("子类构造函数");
     }
 
+
+    void show(){
+        i=44;
+    }
     String replaceSpace(StringBuffer str) {
         while(str.indexOf(" ")>=0) {
             int i = str.indexOf(" ");

@@ -1,6 +1,9 @@
 package com.wenjiehe.JavaSE;
 
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 
 /**
@@ -86,7 +89,7 @@ public  class JavaSE {
         }
     }
 
-    public static void main(String args[]) {
+    public static void main(String args[]) throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException {
         A a1 = new A();
         A a2 = new B();
         //((B)a2).xx();
@@ -142,13 +145,32 @@ public  class JavaSE {
         if(str3==str5)
             System.out.println("yes3");
 
+        Class cl = Class.forName("com.wenjiehe.JavaSE.Test");
+        //Method[] m = cl.getDeclaredMethods();
+        Method[] m = cl.getMethods();
+        for(Method cc : m)
+            System.out.println(Modifier.toString(cc.getModifiers())+cc.getName());
+
+        //Field f = cl.getField("i");
+        Test te = new Test();
+        Class cl2 = (te).getClass();
+        Field f = cl2.getDeclaredField("i");
+        te.show();
+        f.setAccessible(true);
+        Object v = f.get(te);
+        System.out.println(v);
     }
 
-    int xiaochengxu=0;
+    public int xiaochengxu=0;
     static void  xiaochengxu(JavaSE javase){
         //javase = new JavaSE();
         javase.xiaochengxu=99;
         System.out.println(javase.xiaochengxu);
+    }
+
+
+    public void cc(){
+
     }
 }
 
