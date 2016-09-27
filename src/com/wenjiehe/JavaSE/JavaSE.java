@@ -5,11 +5,12 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * Created by yiyuan on 2016/9/24.
  */
-public  class JavaSE {
+public  class JavaSE implements Cloneable{
 
     {
         System.out.println("父类代码块");
@@ -42,7 +43,8 @@ public  class JavaSE {
     JavaSE() {
     }
 
-    String replaceSpace(StringBuffer str) {
+    String replaceSpace(StringBuffer str)  {
+        //super.clone();
         System.out.println("replace");
         return "hello";
     }
@@ -89,7 +91,7 @@ public  class JavaSE {
         }
     }
 
-    public static void main(String args[]) throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException {
+    public static void main(String args[]) throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException, CloneNotSupportedException {
         A a1 = new A();
         A a2 = new B();
         //((B)a2).xx();
@@ -159,6 +161,14 @@ public  class JavaSE {
         f.setAccessible(true);
         Object v = f.get(te);
         System.out.println(v);
+
+
+        Test test =new Test();
+        test.xiaochengxu =99;
+        Test test2 = test.clone();
+        test2.xiaochengxu=98;
+        System.out.println(test.xiaochengxu);
+        System.out.println(test2.xiaochengxu);
     }
 
     public int xiaochengxu=0;
@@ -168,9 +178,17 @@ public  class JavaSE {
         System.out.println(javase.xiaochengxu);
     }
 
-
+static final int yu=0;
     public void cc(){
-
+        //InterfaceTest.o=9;
+        //InterfaceTest.r = new JavaSE();
+        //yu=0;
+//InterfaceTest.o=9;
+    }
+Date date = new Date();
+    @Override
+    protected JavaSE clone() throws CloneNotSupportedException {
+        return (JavaSE)super.clone();
     }
 }
 
