@@ -10,7 +10,7 @@ import java.util.Date;
 /**
  * Created by yiyuan on 2016/9/24.
  */
-public  class JavaSE implements Cloneable{
+public class JavaSE implements Cloneable {
 
     {
         System.out.println("父类代码块");
@@ -43,7 +43,7 @@ public  class JavaSE implements Cloneable{
     JavaSE() {
     }
 
-    String replaceSpace(StringBuffer str)  {
+    String replaceSpace(StringBuffer str) {
         //super.clone();
         System.out.println("replace");
         return "hello";
@@ -118,7 +118,7 @@ public  class JavaSE implements Cloneable{
 
 
         ArrayList<A> al = new ArrayList();
-       // ((ArrayList<JavaSE>)b.arr()).get(0).replaceSpace(""));
+        // ((ArrayList<JavaSE>)b.arr()).get(0).replaceSpace(""));
         //al.get(0).show(new A());
        /* Integer it = 4;
         System.out.println(it.intValue());
@@ -132,26 +132,26 @@ public  class JavaSE implements Cloneable{
         xiaochengxu(jse);
         System.out.println(jse.xiaochengxu);*/
 
-       String str1 = "3";
-       Integer it = Integer.parseInt(str1);
+        String str1 = "3";
+        Integer it = Integer.parseInt(str1);
         String str2 = it.toString();
-        if(str2.equals(str1))
+        if (str2.equals(str1))
             System.out.println("yes");
 
-        String str3="33";
-        String str4=Integer.toString(33);
-        if(str4==str3)
+        String str3 = "33";
+        String str4 = Integer.toString(33);
+        if (str4 == str3)
             System.out.println("yes2");
-            System.out.println(str4);
-        String str5=str4;
-        if(str3==str5)
+        System.out.println(str4);
+        String str5 = str4;
+        if (str3 == str5)
             System.out.println("yes3");
 
         Class cl = Class.forName("com.wenjiehe.JavaSE.Test");
         //Method[] m = cl.getDeclaredMethods();
         Method[] m = cl.getMethods();
-        for(Method cc : m)
-            System.out.println(Modifier.toString(cc.getModifiers())+cc.getName());
+        for (Method cc : m)
+            System.out.println(Modifier.toString(cc.getModifiers()) + cc.getName());
 
         //Field f = cl.getField("i");
         Test te = new Test();
@@ -163,32 +163,42 @@ public  class JavaSE implements Cloneable{
         System.out.println(v);
 
 
-        Test test =new Test();
-        test.xiaochengxu =99;
+        Test test = new Test();
+        test.xiaochengxu = 99;
         Test test2 = test.clone();
-        test2.xiaochengxu=98;
+        test2.xiaochengxu = 98;
         System.out.println(test.xiaochengxu);
         System.out.println(test2.xiaochengxu);
+        int i = 9;
+        test.cc(i);
+
     }
 
-    public int xiaochengxu=0;
-    static void  xiaochengxu(JavaSE javase){
+    public int xiaochengxu = 0;
+
+    static void xiaochengxu(JavaSE javase) {
         //javase = new JavaSE();
-        javase.xiaochengxu=99;
+        javase.xiaochengxu = 99;
         System.out.println(javase.xiaochengxu);
+
     }
 
-static final int yu=0;
-    public void cc(){
+    static final int yu = 0;
+
+    public void cc(final int i) {
+        this.new m();
+        //JavaSE.this.date = new Date();
         //InterfaceTest.o=9;
         //InterfaceTest.r = new JavaSE();
         //yu=0;
 //InterfaceTest.o=9;
     }
-Date date = new Date();
+
+    Date date = new Date();
+
     @Override
     protected JavaSE clone() throws CloneNotSupportedException {
-        return (JavaSE)super.clone();
+        return (JavaSE) super.clone();
     }
 }
 
