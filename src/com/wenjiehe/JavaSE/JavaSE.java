@@ -172,11 +172,17 @@ public class JavaSE implements Cloneable {
         int i = 9;
         test.cc(i);
 
+        final int w;
+        //w=9;
+        w=89;
+        System.out.println(w);
+
     }
 
     public int xiaochengxu = 0;
 
-    static void xiaochengxu(JavaSE javase) {
+    static  void xiaochengxu(JavaSE javase) {
+        Test t = new Test();
         //javase = new JavaSE();
         javase.xiaochengxu = 99;
         System.out.println(javase.xiaochengxu);
