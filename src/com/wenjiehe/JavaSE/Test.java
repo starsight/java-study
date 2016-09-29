@@ -10,7 +10,7 @@ import java.util.Date;
  * Created by yiyuan on 2016/9/24.
  */
 public class Test extends JavaSE{
-    private int i =0;
+    public int i =0;
     static Test tt = new Test();
     {
         System.out.println("子类代码块");
