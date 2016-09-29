@@ -5,6 +5,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 
 /**
@@ -176,6 +177,13 @@ public class JavaSE implements Cloneable {
         //w=9;
         w=89;
         System.out.println(w);
+
+
+       // ArrayList=<Test> arraytest  = new ArrayList<>();
+       // ArrayList<JavaSE> arrayjavase = arraytest;
+
+       // Pair<Test> pair1 = new Pair<>();
+       // Pair<JavaSE> pair2 = pair1;
 
     }
 
