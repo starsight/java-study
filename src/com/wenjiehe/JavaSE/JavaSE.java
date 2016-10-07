@@ -7,9 +7,7 @@ import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
-import java.util.Scanner;
 
-import static jdk.nashorn.internal.objects.NativeMath.min;
 
 /**
  * Created by yiyuan on 2016/9/24.
@@ -182,17 +180,15 @@ public class JavaSE implements Cloneable {
         System.out.println(w);
 
 
-       // ArrayList=<Test> arraytest  = new ArrayList<>();
-       // ArrayList<JavaSE> arrayjavase = arraytest;
+        //ArrayList<Test> arraytest  = new ArrayList<>();
+        // ArrayList<JavaSE> arrayjavase = arraytest;
+        //编译器不允许
 
        // Pair<Test> pair1 = new Pair<>();
        // Pair<JavaSE> pair2 = pair1;
 
-        Pair<JavaSE> d  =new Pair<>();
-        min(d);
-        System.out.println(((Test)d.first).i);
-        //Pair<Test> mc = (Pair<Test>) min(d);
-        //System.out.println(mc.first.i);
+        Pair<? super Manager> pair = new Pair<Employee>(null, null);
+        minMaxSal(new Manager[] {new Manager("",9), new Manager("",8)}, pair);
     }
 
     public int xiaochengxu = 0;
@@ -223,14 +219,14 @@ public class JavaSE implements Cloneable {
         return (JavaSE) super.clone();
     }
 
-    static Pair<?extends JavaSE> min(Pair<? super Test> result){
-        Test test = new Test();
-        result.setFirst(test);
-        ((Test)result.first).i=57;
-        System.out.println(((Test)result.first).i);
-        //Scanner sc = new Scanner(System.in);
-        return (Pair<? extends JavaSE>) result;
-//        (result.first)
+
+    public static void minMaxSal(Manager[] mgrs, Pair<? super Manager> pair) {
+        if (mgrs == null || mgrs.length == 0) {
+            return;
+        }
+
+        pair.setFirst(mgrs[0]);
+        pair.setSecond(mgrs[0]);
     }
 }
 

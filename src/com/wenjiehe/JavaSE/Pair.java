@@ -5,31 +5,62 @@ import java.util.Date;
 /**
  * Created by yiyuan on 2016/9/28.
  */
-public class Pair <T> {
-    T first;
-    T second;
-
-    Pair(){
-
-    }
+public class Pair<T> {
+    public T first;
+    public T second;
 
     public Pair(T first, T second) {
         this.first = first;
         this.second = second;
     }
 
-
-
-
-    void test(){
-
+    public T getFirst() {
+        return first;
     }
 
-    public void setFirst(T first) {
-        this.first = first;
+    public T getSecond() {
+        return second;
     }
 
-    public void setSecond(T second) {
-        this.second = second;
+    public void setFirst(T newValue) {
+        first = newValue;
+    }
+
+    public void setSecond(T newValue) {
+        second = newValue;
     }
 }
+
+class Employee {
+    private String name;
+    private double salary;
+
+    public Employee(String n, double s) {
+        name = n;
+        salary = s;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+}
+
+class Manager extends Employee {
+    public Manager(String n, double s) {
+        super(n, s);
+    }
+}
+
+class President extends Manager {
+    public President(String n, double s) {
+        super(n, s);
+    }
+}
+
+
+
+
