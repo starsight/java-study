@@ -224,6 +224,7 @@ public class JavaSE implements Cloneable {
         if (mgrs == null || mgrs.length == 0) {
             return;
         }
+
         pair.setFirst(mgrs[0]);
         pair.setSecond(mgrs[0]);
     }
