@@ -187,6 +187,8 @@ public class JavaSE implements Cloneable {
        // Pair<Test> pair1 = new Pair<>();
        // Pair<JavaSE> pair2 = pair1;
 
+
+
         Pair<? super Manager> pair = new Pair<Employee>(null, null);
         minMaxSal(new Manager[] {new Manager("",9), new Manager("",8)}, pair);
     }
