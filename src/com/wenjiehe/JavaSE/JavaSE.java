@@ -233,7 +233,7 @@ public class JavaSE implements Cloneable {
         for (String s : ll)
             System.out.println(s);
         System.out.println();
-        MyArrayList<String> all = new MyArrayList();
+        MyLinkedList<String> all = new MyLinkedList();
         all.add("11");
         all.add("22");
         all.add("33");
@@ -241,9 +241,13 @@ public class JavaSE implements Cloneable {
         //all.subList(0,3).clear();
         //String[] values = all.toArray(new String[0]);
         Iterator<String> iterat = all.iterator();
+        iterat.next();
+        iterat.remove();
+        iterat.next();
+        iterat.remove();
         while (iterat.hasNext())
             System.out.println(iterat.next());
-        System.out.println(Integer.MAX_VALUE);
+        //System.out.println(Integer.MAX_VALUE);
         //for(String s:values)
         //    System.out.println(s);
 
