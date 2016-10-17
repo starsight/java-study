@@ -1,6 +1,8 @@
 package com.wenjiehe.JavaSE;
 
+import java.util.ConcurrentModificationException;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 /**
  * Created by yiyuan on 2016/10/17.
@@ -10,7 +12,7 @@ public class MyLinkedList<E> implements Iterable<E> {
     private Node<E> head;
     private Node<E> tail;
     private int size;
-    private int modCount = 0;
+    private int modCount = 0;//operate linkedlist count since created
 
     private static class Node<E> {
         public E data;
@@ -30,12 +32,17 @@ public class MyLinkedList<E> implements Iterable<E> {
     }
 
     public void clear() {
+        head = new Node<E>(null, null, null);
+        tail = new Node<E>(null, head, null);
+        head.next = tail;
 
+        size = 0;
+        modCount++;
     }
 
     @Override
     public Iterator<E> iterator() {
-        return null;
+        return new linkedListIterator();
     }
 
     public int size() {
@@ -71,27 +78,71 @@ public class MyLinkedList<E> implements Iterable<E> {
     }
 
     private void addBefore(Node<E> node, E e) {
-
+        Node<E> obj = new Node<>(e, node.prev, node);
+        node.prev.next = obj;
+        node.prev = obj;
+        size++;
+        modCount++;
     }
 
     private E remove(Node<E> e) {
-
+        e.prev.next = e.next;
+        e.next.prev = e.prev;
+        size--;
+        modCount++;
+        return e.data;
     }
 
     private Node<E> getNode(int index) {
+        if (index < 0 || index > size())
+            throw new IndexOutOfBoundsException();
+        Node<E> nodetmp;
+        if (index < (size() / 2)) {
+            nodetmp = head.next;
+            for (int i = 0; i < index; i++) {
+                nodetmp = nodetmp.next;
+            }
+        } else {//add node before current node,so nodetmp does not equal tailnext while nodetmp equals head.next
+            nodetmp = tail;
+            for (int i = size(); i > index; i--)
+                nodetmp = nodetmp.prev;
+        }
 
+        return nodetmp;
     }
 
-    public class linkedListIterator implements Iterator{
+    private class linkedListIterator implements Iterator<E> {
+
+        private Node<E> current = head.next;
+        private int expectedModCount = modCount;
+        private boolean oktToRemove = false;
 
         @Override
         public boolean hasNext() {
-            return false;
+            return current != tail;
         }
 
         @Override
-        public Object next() {
-            return null;
+        public E next() {
+            if (expectedModCount != modCount)
+                throw new ConcurrentModificationException();
+            if (!hasNext())
+                throw new NoSuchElementException();
+            E next = current.data;
+            current = current.next;
+            oktToRemove = true;
+            return next;
+
+        }
+
+        public void remove(){
+            if (expectedModCount != modCount)
+                throw new ConcurrentModificationException();
+            if (!oktToRemove)
+                throw new IllegalStateException();
+            MyLinkedList.this.remove(current.prev);
+            oktToRemove =false;
+            expectedModCount++;
         }
     }
 
