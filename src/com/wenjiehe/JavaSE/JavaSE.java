@@ -233,19 +233,19 @@ public class JavaSE implements Cloneable {
         for (String s : ll)
             System.out.println(s);
         System.out.println();
-        ArrayList<String> all = new ArrayList();
+        MyArrayList<String> all = new MyArrayList();
         all.add("11");
         all.add("22");
         all.add("33");
         all.add("44");
         //all.subList(0,3).clear();
-        String[] values = all.toArray(new String[0]);
+        //String[] values = all.toArray(new String[0]);
         Iterator<String> iterat = all.iterator();
         while (iterat.hasNext())
             System.out.println(iterat.next());
         System.out.println(Integer.MAX_VALUE);
-        for(String s:values)
-            System.out.println(s);
+        //for(String s:values)
+        //    System.out.println(s);
 
         System.out.println(sieve(100));
         System.out.println("over");
