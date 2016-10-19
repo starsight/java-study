@@ -241,10 +241,12 @@ public class JavaSE implements Cloneable {
         //all.subList(0,3).clear();
         //String[] values = all.toArray(new String[0]);
         Iterator<String> iterat = all.iterator();
+        Iterator<String> iterat2 = all.iterator();
         iterat.next();
-        iterat.remove();
-        iterat.next();
-        iterat.remove();
+        iterat2.next();
+//        all.add("55");
+//        iterat2.remove();
+
         while (iterat.hasNext())
             System.out.println(iterat.next());
         //System.out.println(Integer.MAX_VALUE);
