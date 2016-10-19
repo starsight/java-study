@@ -32,6 +32,5 @@ public class BinaryNodeTree <E extends Comparable<? super E>> {
             return contain(e,p.left);
         else
             return true;
-            //BinaryNode bn = new BinaryNode(e);
     }
 }
