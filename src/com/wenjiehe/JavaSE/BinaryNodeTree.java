@@ -40,7 +40,7 @@ public class BinaryNodeTree<E> {
         if (cmp == null)
             return ((Comparable) e1).compareTo(e2);
         else
-            return cmp.compare(e1,e2);
+            return cmp.compare(e1, e2);
 
     }
 
@@ -69,35 +69,50 @@ public class BinaryNodeTree<E> {
             return true;
     }
 
-    public E findMin(){
-        if(isEmpty())
+    public E findMin() {
+        if (isEmpty())
             throw new NullPointerException();
         else
             return findMin(root).element;
     }
 
-    private BinaryNode<E> findMin(BinaryNode bn){
-        if(bn ==null)
+    private BinaryNode<E> findMin(BinaryNode<E> bn) {
+        if (bn == null)
             return null;
-        else if(bn.left==null)
+        else if (bn.left == null)
             return bn;
         return findMin(bn.left);
     }
 
 
-
-    public E findMax(){
-        if(isEmpty())
+    public E findMax() {
+        if (isEmpty())
             throw new NullPointerException();
         else
             return findMax(root).element;
     }
 
-    private BinaryNode<E> findMax(BinaryNode<E> bn){
-        if(bn ==null)
-            return null;
-        else if(bn.right==null)
-            return bn;
-        return findMax(bn.right);
+    private BinaryNode<E> findMax(BinaryNode<E> bn) {
+        if (bn != null)
+            while (bn.right != null)
+                bn = bn.right;
+        return bn;
+    }
+
+    private BinaryNode<E> insert(E e, BinaryNode<E> bn) {
+        if (bn == null)
+            return new BinaryNode<E>(e, null, null);
+        int compareResult;//= e.
+        if (cmp == null)
+            compareResult = ((Comparable) e).compareTo(bn.element);
+        else
+            compareResult = cmp.compare(e, bn.element);
+        if (compareResult < 0)
+            bn.left = insert(e, bn.left);
+        else if (compareResult > 0)
+            bn.right = insert(e, bn.right);
+        else
+            ;
+        return bn;
     }
 }
