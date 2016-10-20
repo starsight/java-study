@@ -99,6 +99,11 @@ public class BinaryNodeTree<E> {
         return bn;
     }
 
+
+    public void insert(E e){
+        root = insert(e,root);
+    }
+
     private BinaryNode<E> insert(E e, BinaryNode<E> bn) {
         if (bn == null)
             return new BinaryNode<E>(e, null, null);
