@@ -100,8 +100,8 @@ public class BinaryNodeTree<E> {
     }
 
 
-    public void insert(E e){
-        root = insert(e,root);
+    public void insert(E e) {
+        root = insert(e, root);
     }
 
     private BinaryNode<E> insert(E e, BinaryNode<E> bn) {
@@ -118,6 +118,36 @@ public class BinaryNodeTree<E> {
             bn.right = insert(e, bn.right);
         else
             ;
+        return bn;
+    }
+
+
+    public void remove(E e) {
+        root = remove(e, root);
+    }
+
+
+    private BinaryNode<E> remove(E e, BinaryNode<E> bn) {
+        if (bn == null)
+            return bn;
+
+        int compareResult;
+        if (cmp == null)
+            compareResult = ((Comparable) e).compareTo(bn.element);
+        else
+            compareResult = cmp.compare(e, bn.element);
+
+        if (compareResult < 0)
+            bn.left = remove(e, bn.left);
+        else if (compareResult > 0)
+            bn.right = remove(e, bn.right);
+        else if (bn.left != null && bn.right != null) {
+            bn = findMin(bn.right).right;
+            bn.right = remove(bn.element, bn.right);
+        } else {
+            bn = (bn.left != null) ? bn.left : bn.right;
+        }
+
         return bn;
     }
 }
