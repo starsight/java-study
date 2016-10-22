@@ -150,4 +150,18 @@ public class BinaryNodeTree<E> {
 
         return bn;
     }
+    public void printTree(){
+        if(isEmpty())
+            System.out.println("empty tree");
+        else
+            printTree(root);
+    }
+
+    private void printTree(BinaryNode<E> bn){
+        if(bn!=null){
+            printTree(bn.left);
+            System.out.println(bn.element);
+            printTree(bn.right);
+        }
+    }
 }

@@ -255,6 +255,14 @@ public class JavaSE implements Cloneable {
 
         System.out.println(sieve(100));
         System.out.println("over");
+
+        BinaryNodeTree<Integer> bnt =new BinaryNodeTree();
+        bnt.insert(3);
+        bnt.insert(1);
+        bnt.insert(2);
+        bnt.insert(4);
+        bnt.insert(6);
+        bnt.printTree();
     }
 
     public int xiaochengxu = 0;
