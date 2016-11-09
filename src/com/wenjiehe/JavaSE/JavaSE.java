@@ -263,6 +263,9 @@ public class JavaSE implements Cloneable {
         bnt.insert(4);
         bnt.insert(6);
         bnt.printTree();
+        System.out.println("start");
+        RebuildTree re =new RebuildTree();
+        re.reConstructBinaryTree(new int[]{1,2,3,4,5,6,7}, new int[]{3,2,4,1,6,5,7});
     }
 
     public int xiaochengxu = 0;
