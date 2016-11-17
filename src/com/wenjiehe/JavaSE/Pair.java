@@ -1,5 +1,6 @@
 package com.wenjiehe.JavaSE;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -31,7 +32,7 @@ public class Pair<T> {
     }
 }
 
-class Employee {
+class Employee implements Serializable{
     private String name;
     private double salary;
 
