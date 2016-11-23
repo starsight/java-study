@@ -36,9 +36,14 @@ class Employee implements Serializable{
     private String name;
     private double salary;
 
+
     public Employee(String n, double s) {
         name = n;
         salary = s;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getName() {
