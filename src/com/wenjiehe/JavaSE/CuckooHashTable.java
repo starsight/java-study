@@ -2,12 +2,12 @@ package com.wenjiehe.JavaSE;
 
 
 public class  CuckooHashTable<AnyType>{
-	public CuckooHashTable(HashFamily<? super AnyType> hf){
+	/*public CuckooHashTable(HashFamily<? super AnyType> hf){
 		this(hf,DEFAULT_TABLE_SIZE);
 	}
 
 	public CuckooHashTable(HashFamily<? super AnyType> hf,int size){
-		allocateArray(nextPrime(size));
+		//allocateArray(nextPrime(size));
 		doClear();
 		hashFunctions = hf;
 		numHashFunctions = hf.getNumberOfFunctions();
@@ -64,7 +64,7 @@ public class  CuckooHashTable<AnyType>{
 	private final int numHashFunctions;
 	private AnyType[] array;
 	private int currentSize;
-
+*/
 	/*public static <AnyType extends Comparable<? super AnyType>> void a(AnyType as){
 
 	}*/
