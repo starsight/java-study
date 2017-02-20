@@ -895,7 +895,7 @@
       <workItem from="1487409030915" duration="2107000" />
       <workItem from="1487485956246" duration="5289000" />
       <workItem from="1487566420690" duration="5601000" />
-      <workItem from="1487591529695" duration="754000" />
+      <workItem from="1487591529695" duration="791000" />
     </task>
     <task id="LOCAL-00001" summary="9-24 设计模式入门-策略模式">
       <created>1474698706979</created>
@@ -1139,7 +1139,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32128000" />
+    <option name="totallyTimeSpent" value="32165000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
