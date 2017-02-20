@@ -20,7 +20,7 @@ public class Stream {
             //in = new FileInputStream("java-study.iml");
 //            while(in.read())
             PrintWriter pw = new PrintWriter("a.txt");
-            pw.print("222");
+            pw.print("222444");
             pw.println();
             pw.close();
 
@@ -52,6 +52,43 @@ public class Stream {
 
         System.out.println(ee);
 
+
+        //FileInputStream fiis = new FileInputStream("shuruyiduanhua");
+        FileReader fr = null;
+        try {
+            fr = new FileReader("a.txt");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        char[] cc = new char[50];
+        int num = 0;
+        try {
+            while((num=fr.read(cc))!=-1){
+                System.out.println(cc);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        char[] ca =new char[]{'t', 't'};
+        char c='t';
+        chuan('t');
+        chuanarray(ca);
+        System.out.println(c);
+        System.out.println(ca[0]);
+
     }
 
+    public static void chuan(char c){
+        System.out.println("chuan:"+ c);
+        c = 'a';
+        System.out.println("chuan:"+ c);
+
+    }
+    public static void chuanarray(char[] c){
+        System.out.println("chuan:"+ c[0]);
+        c[0] = 'a';
+        System.out.println("chuan:"+ c[0]);
+
+    }
 }
