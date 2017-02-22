@@ -1,4 +1,4 @@
-package com.wenjiehe.JavaSE;
+package com.wenjiehe.Algorithm;
 
 import java.util.Arrays;
 

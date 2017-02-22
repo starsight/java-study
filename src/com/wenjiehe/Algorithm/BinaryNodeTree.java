@@ -1,4 +1,4 @@
-package com.wenjiehe.JavaSE;
+package com.wenjiehe.Algorithm;
 
 import java.nio.BufferUnderflowException;
 import java.util.Comparator;

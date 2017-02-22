@@ -1,4 +1,4 @@
-package com.wenjiehe.JavaSE;
+package com.wenjiehe.BaseTest;
 
 /**
  * Created by yiyuan on 17/2/14.

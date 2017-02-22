@@ -1,10 +1,4 @@
-package com.wenjiehe.JavaSE;
-
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Comparator;
-
-import static com.wenjiehe.JavaSE.InterfaceTest.o;
+package com.wenjiehe.BaseTest;
 
 /**
  * Created by yiyuan on 16/11/20.

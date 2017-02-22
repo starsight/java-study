@@ -1,8 +1,8 @@
-package com.wenjiehe.JavaSE;
+package com.wenjiehe.BaseTest;
+
+import com.wenjiehe.BaseTest.Employee;
 
 import java.io.*;
-
-import static com.wenjiehe.JavaSE.InterfaceTest.o;
 
 /**
  * Created by yiyuan on 16/11/16.

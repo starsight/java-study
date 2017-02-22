@@ -1,15 +1,13 @@
-package com.wenjiehe.JavaSE;
+package com.wenjiehe.BaseTest;
 
-import com.sun.org.apache.bcel.internal.generic.ARRAYLENGTH;
-
-import java.lang.reflect.Array;
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by yiyuan on 2016/9/24.
  */
-public class Test extends JavaSE{
+public class Test extends JavaSE {
     public int i =0;
     static Test tt = new Test();
     {
@@ -28,6 +26,7 @@ public class Test extends JavaSE{
     void show(){
         //Arrays.copyOf();
         //Array a -new Array();
+        List<String> a = new ArrayList<String>();
         i=44;
     }
     public String replaceSpace(StringBuffer str) {

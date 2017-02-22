@@ -1,12 +1,11 @@
-package com.wenjiehe.JavaSE;
+package com.wenjiehe.BaseTest;
 
 
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
+import com.wenjiehe.Algorithm.BinaryNodeTree;
+import com.wenjiehe.Algorithm.MyLinkedList;
+import com.wenjiehe.Algorithm.RebuildTree;
+
 import java.util.*;
-
-import static com.sun.org.apache.xml.internal.security.keys.keyresolver.KeyResolver.iterator;
 
 
 /**
@@ -149,7 +148,7 @@ public class JavaSE implements Cloneable {
         if (str3 == str5)
             System.out.println("yes3");
 
-        Class cl = Class.forName("com.wenjiehe.JavaSE.Test");
+        Class cl = Class.forName("com.wenjiehe.BaseTest.Test");
         //Method[] m = cl.getDeclaredMethods();
         Method[] m = cl.getMethods();
         for (Method cc : m)

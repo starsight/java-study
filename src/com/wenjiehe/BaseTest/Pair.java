@@ -1,7 +1,6 @@
-package com.wenjiehe.JavaSE;
+package com.wenjiehe.BaseTest;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * Created by yiyuan on 2016/9/28.
@@ -32,7 +31,7 @@ public class Pair<T> {
     }
 }
 
-class Employee implements Serializable{
+ class Employee implements Serializable{
     private String name;
     private double salary;
 
