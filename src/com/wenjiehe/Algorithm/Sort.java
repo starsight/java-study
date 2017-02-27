@@ -103,6 +103,7 @@ public class Sort{
 	}
 
 	public static void quickSort2(int nums[],int start,int end){
+		//从小到大排序
 		int temp = nums[start];
 		int startTmp = start, endTmp = end;
 		if(start<end) {
