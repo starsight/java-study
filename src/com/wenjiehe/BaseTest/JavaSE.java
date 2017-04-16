@@ -12,7 +12,7 @@ import java.util.*;
  * Created by yiyuan on 2016/9/24.
  */
 public class JavaSE implements Cloneable {
-
+    final int xx=285;
     {
         System.out.println("父类代码块");
     }
@@ -265,6 +265,9 @@ public class JavaSE implements Cloneable {
         System.out.println("start");
         RebuildTree re =new RebuildTree();
         re.reConstructBinaryTree(new int[]{1,2,3,4,5,6,7}, new int[]{3,2,4,1,6,5,7});
+
+        JavaSE jse = new Test();
+        System.out.println(jse.xx);
     }
 
     public int xiaochengxu = 0;

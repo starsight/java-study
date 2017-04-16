@@ -9,6 +9,7 @@ import java.util.List;
  */
 public class Test extends JavaSE {
     public int i =0;
+     int xx=3;
     static Test tt = new Test();
     {
         System.out.println("子类代码块");
