@@ -11,7 +11,7 @@ import java.util.*;
 /**
  * Created by yiyuan on 2016/9/24.
  */
-public class JavaSE implements Cloneable {
+public class JavaSE  {
     final int xx=285;
     {
         System.out.println("父类代码块");
@@ -255,7 +255,7 @@ public class JavaSE implements Cloneable {
         System.out.println(sieve(100));
         System.out.println("over");
 
-        BinaryNodeTree<Integer> bnt =new BinaryNodeTree();
+        BinaryNodeTree<Integer> bnt =new BinaryNodeTree<>();
         bnt.insert(3);
         bnt.insert(1);
         bnt.insert(2);

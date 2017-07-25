@@ -21,6 +21,12 @@ public class StringInt {
 //        } catch (ParseException e) {
 //            e.printStackTrace();
 //        }
+        Person peron = new Person(){
+            void getPerson(){
+                System.out.print("implements");
+            }
+        };
+        peron.getPerson();
         int[] nums = {5,4,3,2,88,10,7,9,1};
         int[] record = new int[nums.length];
         //System.out.println(Arrays.toString(findRelativeRanks(nums)));
@@ -30,6 +36,8 @@ public class StringInt {
        System.out.println(Arrays.toString(nums));
 
     }
+
+
 
     public static int partition(int []array,int lo,int hi){
         //固定的切分方式
@@ -86,5 +94,10 @@ public class StringInt {
         result[numsTmp[2]] = "Bronze Medal";
 
         return result;
+    }
+}
+ class Person{
+    void getPerson(){
+        System.out.print("get Person");
     }
 }
