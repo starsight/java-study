@@ -3,7 +3,7 @@ package com.wenjiehe.leetcode;
 /**
  * Created by Administrator on 2017/9/7.
  */
-public class p628 {
+public class P628 {
     public static int maximumProduct(int[] nums) {
         int[] max =new int[3];
         int[] min =new int[2];
