@@ -30,11 +30,13 @@ public class StringInt {
         int[] nums = {5,4,3,2,88,10,7,9,1};
         int[] record = new int[nums.length];
         //System.out.println(Arrays.toString(findRelativeRanks(nums)));
-        Sort.quickSort2(nums,0,nums.length-1);
+        //Sort.quickSort2(nums,0,nums.length-1);
         //Sort.shellSort(nums,nums.length);
         //sort(nums,0,nums.length-1);
-       System.out.println(Arrays.toString(nums));
 
+
+       Sort.maoPaoSort(nums);
+        System.out.println(Arrays.toString(nums));
     }
 
 

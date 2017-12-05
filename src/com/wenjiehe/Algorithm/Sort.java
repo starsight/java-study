@@ -152,4 +152,20 @@ public class Sort{
 		}
 	}
 
+	public static void maoPaoSort(int nums[]){
+		int temp = 0;
+		for (int j = 0; j < nums.length; j++) {
+			for (int i = 0; i < nums.length-j-1; i++) {
+
+				if(nums[i]>nums[i+1]){
+					temp = nums[i];
+					nums[i] = nums[i+1];
+					nums[i+1] = temp;
+				}
+
+			}
+		}
+
+	}
+
 }
