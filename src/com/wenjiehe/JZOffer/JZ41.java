@@ -32,25 +32,6 @@ public class JZ41 {
         return result;
     }
 
-    public String LeftRotateString(String str,int n) {
-        char[] character = str.toCharArray();
-
-        reverseArray(character,0,n-1);
-        reverseArray(character,n,character.length-1);
-        reverseArray(character,0,character.length-1);
-
-        return new String(character);
-    }
-    public void reverseArray(char[] array,int start,int end){
-        char temp ='0';
-        while(start<end){
-            array[start]= temp;
-            array[start] = array[end];
-            array[end] = temp;
-            start++;
-            end--;
-        }
-    }
 
     public static void main(String[] args) {
         FindContinuousSequence(100);
