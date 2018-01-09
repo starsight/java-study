@@ -1,5 +1,6 @@
 package com.wenjiehe.leetcode;
 
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -8,7 +9,7 @@ package com.wenjiehe.leetcode;
  *     ListNode(int x) { val = x; }
  * }
  */
-class Solution {
+class P21 {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if(l1==null||l2==null)
             return (l1==null)?l2:l1;
