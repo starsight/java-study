@@ -268,6 +268,8 @@ public class JavaSE  {
 
         JavaSE jse = new Test();
         System.out.println(jse.xx);
+
+        tryCatchFinally(2);
     }
 
     public int xiaochengxu = 0;
@@ -333,6 +335,18 @@ public class JavaSE  {
 
         pair.setFirst(mgrs[0]);
         pair.setSecond(mgrs[0]);
+    }
+
+    public static int tryCatchFinally(int i){
+        try {
+            i++;
+            return i;
+        }catch (Exception e){
+            return -1;
+        }finally{
+            i++;
+        }
+
     }
 }
 
