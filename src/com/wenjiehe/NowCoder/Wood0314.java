@@ -8,6 +8,10 @@ import java.util.Scanner;
  */
 public class Wood0314 {
 
+    /***
+     * case通过50%
+     * @param args
+     */
     public static void  main(String []args){
         Scanner in = new Scanner(System.in);
         int N = in.nextInt();

@@ -7,6 +7,9 @@ import java.util.Scanner;
  * Created by Administrator on 2018/3/14.
  */
 public class SwapSeq0314 {
+    /**
+     * case通过100%
+     * */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
