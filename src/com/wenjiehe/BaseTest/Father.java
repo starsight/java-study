@@ -7,19 +7,28 @@ import java.util.List;
  * Created by Administrator on 2018/2/27.
  */
 class Father {
-
+    Fruit overw(){
+        System.out.println("Father");
+        return new Fruit();
+    }
 }
 class Son extends Father{
     int a=0;
     void print(){
         System.out.println(a);
     }
+    String overw(int i){
+        System.out.println("Son");
+        return "";
+    }
+
 }
 class Son2 extends  Father{
     int a2=0;
     void print(){
         System.out.println(a2);
     }
+
 }
 
 class T{
@@ -34,6 +43,16 @@ class T{
         if(list.getClass()==str2.getClass()){
             System.out.println("");
         }
+
+        Integer i1 = 9;
+        Integer i2 =new Integer(9);
+        //System.out.println(i1==i2);
+        int i3 =9;
+        System.out.println(i1==i3);
+        System.out.println(i1.equals(i3));
+        System.out.println(i2.equals(i3));
+        System.out.println(i2==i1);
+        double s =01212;
 
     }
 
@@ -59,6 +78,12 @@ class T{
         if(ss2 instanceof Son2){
             ((Son2)ss2).print();
         }
+
+        byte b1=127,b2=2,b3,b6;
+        final byte b4=4,b5=6;
+        b3=b4+b5;
+        b3=(byte)(b1+b2);
+        //System.out.println(b6);
     }
 }
 
