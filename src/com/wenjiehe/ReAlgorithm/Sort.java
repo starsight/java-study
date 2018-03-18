@@ -6,9 +6,10 @@ public class Sort {
 
 
     public static void main(String[] args) {
-        int[] nums = {5,4,3,2,88,10,7,9,1};
+        int[] nums = {5,4,3,2,88,10,7,9,91,10,23,54,33,22,5,8,44,1};
 
-        Sort.maoPaoSort(nums);
+        //Sort.maoPaoSort(nums);
+        Sort.quickSort1(nums,0,nums.length-1);
 
         System.out.println(Arrays.toString(nums));
     }
@@ -28,5 +29,39 @@ public class Sort {
             }
         }
     }
+
+    /***
+     * 剑指offer的方法 P64
+     */
+    private static void  quickSort1(int[] num,int start,int end){
+        if(start==end)
+            return ;
+        int index = partition(num,start,end);
+        if(index>start)
+            quickSort1(num,start,index-1);
+        if(index<end)
+            quickSort1(num,index+1,end);
+    }
+
+    private static int partition(int[] num ,int start,int end){
+        int index =start;
+        for(int i= start;i<end;i++){
+            if(num[i]<num[end]){
+                if(index!=i){
+                    swap(num,i,index);
+                }
+                index++;
+            }
+        }
+        swap(num,index,end);
+        return index;
+    }
+
+    private  static void swap(int[] num,int i ,int j){
+        int temp = num[i];
+        num[i] = num[j];
+        num[j] =temp;
+    }
+
 
 }
