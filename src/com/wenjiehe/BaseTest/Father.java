@@ -51,7 +51,7 @@ class T{
         System.out.println(i1==i3);
         System.out.println(i1.equals(i3));
         System.out.println(i2.equals(i3));
-        System.out.println(i2==i1);
+        //System.out.println(i2==i1);
         double s =01212;
 
     }
