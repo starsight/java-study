@@ -22,6 +22,7 @@ public class NetEase01 {
         int max = Integer.MIN_VALUE;
         int index = -1;
 
+        //题目没有说排没排序
         for (int i = clockCount - 1; i >= 0; i--) {
             int time = clock[i][0] * 60 + clock[i][1];
             if (time <= allTime && time > max) {
