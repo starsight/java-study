@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class NetEase03 {
 
-    /**
+    /**out memory
      * accept20%
      * */
     public static void main(String[] args) {
