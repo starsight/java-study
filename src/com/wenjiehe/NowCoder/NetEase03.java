@@ -27,14 +27,28 @@ public class NetEase03 {
         }
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= w; j++) {
-                if (w - weight[i - 1] < 0) {
+                if (j - weight[i - 1] < 0) {
                     res[i][j] = res[i - 1][j];
                 } else {
-                    res[i][j] = res[i - 1][j] > (res[i - 1][w - weight[i - 1]] * 2) ? res[i - 1][j] : (res[i - 1][w - weight[i - 1]] * 2);
+                    res[i][j] = res[i - 1][j] +res[i-1][j-weight[i-1]];
                 }
             }
 
         }
+
+//        for (int i = 1; i <= n; i++) {
+//            for (int j = 1; j <= w; j++) {
+//                for (int k = j-1; k >=0 ; k--) {
+//                    if(k+weight[i-1]<=j-1){
+//                        res[i][j]+=res[i-1][k];
+//                        break;
+//                    }
+//                }
+//                res[i][j]+=res[i-1][j];
+//            }
+//
+//        }
+
         System.out.println(res[n][w]);
     }
 }
