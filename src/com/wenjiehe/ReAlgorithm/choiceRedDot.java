@@ -108,5 +108,6 @@ e:15,f:10,h:6
 
         res = choiceRedDot(_nodePath, _nodeCount);
         System.out.println(res);
+        in.close();
     }
 }
