@@ -18,7 +18,7 @@ public class CodeM02 {
         for (int i = 0; i < k; i++) {
             res[i] = m*sc.nextInt();
             res[i] += (n-m)*sc.nextInt();
-            if(max<res[i]){
+            if(max<=res[i]){
                 max = res[i];
                 index = i;
             }
@@ -28,7 +28,7 @@ public class CodeM02 {
             if(i!=index) {
                 System.out.print("0");
             }else{
-                System.out.print(k);
+                System.out.print(n);
             }
 
             if(i != k-1){
