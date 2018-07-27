@@ -58,7 +58,7 @@ public class Maze {
     }
 
     private void modifyMaze() throws Exception {
-        if (maze == null) {
+        if (maze == null || "".equals(state)) {
             return;
         }
         String[] str = state.split(";");
@@ -87,7 +87,7 @@ public class Maze {
                     if (!vertifyNumberRangeCol(fC) ||
                             !vertifyNumberRangeRow(sC) ||
                             !vertifyNumberRangeRow(fR) ||
-                            !vertifyNumberRangeRow(sR)){
+                            !vertifyNumberRangeRow(sR)) {
                         throw new Exception("Number out of range.");
                     }
 
@@ -116,12 +116,12 @@ public class Maze {
 
     private boolean vertifyConnection(int fR, int fC, int sR, int sC) {
 
-            if (fR == sR) {
-                return Math.abs(fC - sC) == 1;
-            } else if (Math.abs(fR - sR) == 1) {
-                return fC == sC;
-            }
-            return false;
+        if (fR == sR) {
+            return Math.abs(fC - sC) == 1;
+        } else if (Math.abs(fR - sR) == 1) {
+            return fC == sC;
+        }
+        return false;
 
     }
 
@@ -162,17 +162,21 @@ public class Maze {
         if (result != null) {
             for (int i = 0; i < result.length; i++) {
                 for (int j = 0; j < result[0].length; j++) {
+
                     if (result[i][j]) {
                         System.out.print("[R]");
                     } else {
                         System.out.print("[W]");
                     }
-                    if(j!=result[0].length-1){
+                    if (j != result[0].length - 1) {
                         System.out.print(" ");
                     }
+
                 }
+
                 System.out.println();
             }
         }
+
     }
 }
