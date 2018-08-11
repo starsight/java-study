@@ -1,4 +1,4 @@
-package com.wenjiehe.NowCoder;
+package com.wenjiehe.QiuZhao;
 
 import java.util.ArrayList;
 import java.util.Arrays;
