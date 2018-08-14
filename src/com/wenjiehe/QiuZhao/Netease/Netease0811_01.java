@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Created by Administrator on 2018/8/11.
  */
 public class Netease0811_01 {
-    //0%
+    //0% 修改后100%
     public static void main(String[] args) {
         solution();
     }
@@ -46,7 +46,9 @@ public class Netease0811_01 {
         }
 
         res= maxmin(arr);
-        System.out.println(res[0]-res[1]+" "+count);
+        //System.out.println(res[0]-res[1]+" "+count);//写错了
+        System.out.println(arr[res[0]]-arr[res[1]]+" "+count);//正确
+
         for (int i = 0; i < count; i++) {
             System.out.println(str[i]);
         }

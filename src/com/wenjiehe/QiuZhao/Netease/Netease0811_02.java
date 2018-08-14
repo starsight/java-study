@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Created by Administrator on 2018/8/11.
  */
 public class Netease0811_02 {
-    // 60%
+    // 60% 修正middle==0时的判断->100%
     public static void main(String[] args) {
         solution();
     }
@@ -48,7 +48,12 @@ public class Netease0811_02 {
         while (low <= high) {
             int middle = (low + high) / 2;
             if (middle == 0) {
-                return 0;
+                //对于在0，和在1没有校验！
+                if(arr[middle]>des) {
+                    return 0;
+                }else{
+                    return 1;
+                }
             }
             if (arr[middle] >= des && arr[middle - 1] < des) {
                 //index =middle;
@@ -60,5 +65,23 @@ public class Netease0811_02 {
             }
         }
         return -1;
+    }
+
+    //最简洁的办法
+    public static int BinarySearch(int[] arr, int des) {
+        int low = 0;
+        int high = arr.length - 1;
+        while (low <= high) {
+            int middle = (low + high) / 2;
+
+            if (arr[middle] == des) {
+                return middle;
+            } else if (arr[middle] < des) {
+                low = middle + 1;
+            } else {
+                high = middle - 1;
+            }
+        }
+        return low;
     }
 }
