@@ -1,5 +1,11 @@
 package com.wenjiehe.QiuZhao;
 
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Inherited;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 import java.util.Scanner;
 
 public class XieCheng {
@@ -99,4 +105,13 @@ public class XieCheng {
         System.out.println(result.toUpperCase());
     }
 
+    @Documented
+    @Target(ElementType.METHOD)
+    @Inherited
+    @Retention(RetentionPolicy.RUNTIME)
+    public @interface MyAnnoation{
+        String name();
+        String website() default "hello";
+        int revision() default 1;
+    }
 }
